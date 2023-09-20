@@ -697,7 +697,24 @@ lowercase = %x61-7A  ; "a" to "z"
                 "href": "bacnet://5/0,1/85",
                 "bacv:service": "subscribeCOVproperty"
             }]
-        }
+        },
+        "analog2": {
+            "type": "number".
+            "readOnly": false,
+            "uriVariables": {
+                "CommandPriority": {
+                    "@type": "bacv:CommandPriority",
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 16
+                }
+            },
+            "forms": [{
+                "op": [ "writeproperty" ],
+                "href": "bacnet://5/0,1/87",
+                "bacv:service": "writeproperty"
+            }]
+         }
     }
 }
 </pre>
@@ -715,6 +732,16 @@ lowercase = %x61-7A  ; "a" to "z"
                 "href": "bacnet://5/0,1/85",
                 "bacv:service": "subscribeCOVproperty",
                 "bacv:covIncrement": 0.2
+            }]
+        },
+        "analog2": {
+            "type": "number".
+            "readOnly": false,
+            "forms": [{
+                "op": [ "writeproperty" ],
+                "href": "bacnet://5/0,1/87",
+                "bacv:service": "writeproperty",
+                "bacv:CommandPriority": 5
             }]
         }
     }
